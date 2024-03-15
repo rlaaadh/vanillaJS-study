@@ -85,11 +85,12 @@
         } else {
           // 현재 36번 이미지일 때 (960*5, 540*5)
           if (currentImgPositionX === -IMAGE_WIDTH * 5) {
-            currentImgPositionX = 0;
-            currentImgPositionY -= IMAGE_HEIGHT;
-            if (currentImgPositionY === -IMAGE_HEIGHT * 6) {
-              currentImgPositionY = 0;
+            if (currentImgPositionY === -IMAGE_HEIGHT * 5) {
+                currentImgPositionY = 0;
+            }else{
+              currentImgPositionY -= IMAGE_HEIGHT;
             }
+            currentImgPositionX = 0;
             return;
           }
 
