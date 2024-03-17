@@ -103,6 +103,11 @@
     });
     dragSection.addEventListener("mouseup", function (event) {
       isDragging = false;
+      dragSection.style.cursor = "default";
+    });
+    dragSection.addEventListener("mouseleave", function (event) {
+      isDragging = false;
+      dragSection.style.cursor = "default";
     });
     // Drag Event [E]
 
