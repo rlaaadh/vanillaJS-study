@@ -115,6 +115,15 @@
   const tabButtons = document.querySelectorAll('[data-image]');
   const tabContents = document.querySelector('.tab__cont');
 
+  function preLoad(){
+    tabButtons.forEach(function(button){
+      const imgName = button.dataset.image;
+      const img = new Image();
+      img.src= './images/' + imgName + '.jpg';
+    });
+  }
+  preLoad();
+
   tabButtons.forEach(function(button){
     button.addEventListener('click', function(){
       const activeButton = document.querySelector('.is-active');
